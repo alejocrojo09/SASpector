@@ -2,7 +2,7 @@
 
 "Analysis of missing regions in short-read assemblies of bacterial genomes" Emma Verkinderen, Deniz Sinar, Alejandro Correa Rojo.
 
-Advisor: Cédric Loord
+Advisor: Cédric Lood
 
 Master of Bioinformatics - KU Leuven, Belgium
 
