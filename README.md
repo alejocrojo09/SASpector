@@ -4,15 +4,15 @@
 Advisor: Cédric Loord
 Master of Bioinformatics - KU Leuven
 
-## Tool: What the *** is wrong with my Illumina Assembly? (To change)
+## Tool: SaSpector (Short-read Assembly Inspector) (to change?)
 
-A bioinformatics tool to extract and analyze unmapped regions from a hybrid genome assembly which were not covered by De novo assembly with Illumina short reads.
+A bioinformatics tool to extract and analyze missing regions of short-read assemblies by mapping the contigs to a reference genome.
 
 ## Introduction
 
-What the *** is wrong with my Illumina Assembly? is a tool that compares a Hybrid assembly with a De novo assembly of bacterial genomes by extracting (if apply) unmapped regions from De novo assembly in the hybrid assembly and analyze them to see functional and compositional pattern to explain why these regions are not covered in Illumina sequencing.
+SaSpector is a tool that compares a short-read assembly with a reference bacterial genome (for example obtained via hybrid assembly) by extracting missing (unmapped) regions from the reference and analyzing them to see functional and compositional pattern, in order to explain why these regions are missed by the short-read assembly.
 
-The tool takes as global inputs the hybrid assembly as reference genome and short reads assembly as contigs/draft genome, both in FASTA format. What the *** is wrong with my Illumina Assembly? is composed with four modules:
+The tool takes as global inputs the reference genome and short-read assembly as contigs/draft genome, both in FASTA format. SaSpector is composed with four modules:
 
 - **mapper**: mapping of the short reads assembly with the hybrid assembly using progressiveMauve.
 - **extraction**: extraction of the unmapped regions and the regions with ordering problems with the reference genome (Explain this).
