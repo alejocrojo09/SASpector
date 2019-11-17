@@ -66,8 +66,10 @@ optional arguments:
   ```
 
 First, Mauve performs an alignment of both genomes with the progressiveMauve algorithm. It will generate a subdirectory prefix.alignment with several output files but most importantly the backbone file with coordinates of the mapped and unmapped regions in the reference genome. 
+
 Afterwards, this script will parse the backbone file and extract the sequences that are not covered in the short-read assembly from the reference genome. They are written to a multi-fasta file with the prefix and coordinates in the headers, which is done equally for the mapped and conflict regions (regions that didn't map correctly due to gaps or indels). 
-Finally, two summary files are generated. One for the reference, with 
+
+Finally, two tab-delimited summary files are generated in a subdirectory called summary. One for the reference, with the amount of gapped and ungapped regions, the fraction of the reference genome that they represent, the GC content and the length. The other one for the unmapped regions, with for each region the GC content and length and then for each amino acid the occurence frequency averaged over all 6 reading frames.
 
 ### Checker - in progress (blast settings tuning)
 
@@ -101,7 +103,7 @@ The following python scripts are provided for analysis of missing regions.
 - `kmer.py`
 - ... (also add some explanations)
 
-They are not (yet) implemented as command-line tools, anyone is free to use them. For the IBP project, they are used in a Snakemake file for automation and high-throughput goals.
+They are not (yet) implemented as command-line tools, anyone is free to use them at will. For the IBP project, they are used in a Snakemake file for automation and high-throughput goals.
 
 ### References
 - Altschul, S. F., Gish, W., Miller, W., Myers, E. W., & Lipman, D. J. (1990). Basic local alignment search tool. Journal of Molecular Biology, 215(3), 403–410.
